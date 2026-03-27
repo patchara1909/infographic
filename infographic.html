@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อินโฟกราฟิก รายงานความก้าวหน้าโครงงาน</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #2d2d2d;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border-radius: 10px;
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            background: #3a3a3a;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid #4ecdc4;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #4ecdc4;
+            display: flex;
+            align-items: center;
+        }
+        .section h2 i {
+            margin-right: 10px;
+        }
+        .progress-bar {
+            background: #555;
+            border-radius: 10px;
+            height: 20px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s;
+        }
+        .timeline {
+            list-style: none;
+            padding: 0;
+        }
+        .timeline li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .timeline li:before {
+            content: '•';
+            color: #4ecdc4;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+        }
+        .references {
+            background: #454545;
+            padding: 10px;
+            border-left: 5px solid #ff6b6b;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .tool {
+            background: #555;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .images {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .images img {
+            max-width: 400px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .small {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>รายงานความก้าวหน้าโครงการ</h1>
+            <h2>Automatic Attendance System using Facial Recognition and 2FA</h2>
+            <p>นางสาวพัชราภรณ์ ขีดขิน (6612247037) - เอกเลือก Robot Automation</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-user"></i>1. บทบาทและขอบเขตงานที่รับผิดชอบ</h2>
+            <p><strong>หน้าที่หลัก:</strong> เทรน AI ตรวจจับใบหน้า, เจน QR CODE ให้อยู่ได้ 60 วินาที และพัฒนาระบบ QR Code สำหรับล็อคอิน, UI แสดงประวัติการสแกน QR Code</p>
+            <p><strong>เป้าหมาย:</strong> สามารถนำ QR CODE มาใช้ร่วมกับ AI ตรวจจับใบหน้าได้</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-chart-line"></i>2. ผลการดำเนินงาน</h2>
+            <p>สำหรับงานที่ได้รับมอบหมายทำได้ครบ 80%</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%;"></div>
+            </div>
+            <p>สามารถนำ QR Code ไปสแกนร่วมกับ AI ตรวจจับใบหน้าได้แล้ว และสามารถแสดงประวัติ (วัน/เวลา) ที่มีการสแกนหรือยืนยันตัวตนขึ้นแสดงได้แล้ว</p>
+            <div class="tools">
+                <span class="tool">OpenCV</span>
+                <span class="tool">WebRTC</span>
+                <span class="tool">MySQL</span>
+                <span class="tool">UI</span>
+            </div>
+            <p><strong>หลักฐาน:</strong> <a href="https://github.com/patchara1909/scan_test.py" style="color: #4ecdc4;">GitHub Repository</a></p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-brain"></i>3. การใช้หลักการและเหตุผล</h2>
+            <p>ทำไมถึงใช้ QR Code? เพื่อเพิ่มความปลอดภัยและความรวดเร็วในการยืนยันตัวตน</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+            <ul class="timeline">
+                <li><strong>QR Code:</strong> ใช้ความรู้มาตรฐาน QR Code และ Dynamic QR Code เพื่อเพิ่มความปลอดภัย</li>
+                <li><strong>Computer Vision:</strong> ใช้ OpenCV และ WebRTC สำหรับประมวลผลภาพและเชื่อมต่อกล้อง</li>
+                <li><strong>UI Design:</strong> ออกแบบเน้นความถูกต้อง ความรวดเร็ว และความพึงพอใจ</li>
+                <li><strong>Database:</strong> ใช้ MySQL สำหรับจัดเก็บข้อมูล</li>
+            </ul>
+            <div class="references">
+                <strong>อ้างอิง:</strong> Denso Wave, ISO/IEC 18004, Szeliski's Computer Vision, OpenCV, WebRTC, MySQL Docs
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-link"></i>4. การเชื่อมโยงงานกับวัตถุประสงค์ของโครงงานและภาพรวมของกลุ่ม</h2>
+            <p>QR Code เปรียบเสมือนรหัสนักศึกษา ใช้ก่อนการยืนยันตัวตน และตรวจสอบวัน/เวลา</p>
+            <p><strong>เชื่อมกับ:</strong> Database และ AI ตรวจจับใบหน้า</p>
+            <p><strong>ผลลัพธ์ส่งต่อ:</strong> ระบบ QR Code มีฟังก์ชันครบแล้ว</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-search"></i>5. การวิเคราะห์ แก้ปัญหา และการเรียนรู้</h2>
+            <p><strong>ปัญหาที่พบ:</strong></p>
+            <ul class="timeline">
+                <li>QR Code ไม่ยืนยันตัวตนคนที่สแกน</li>
+                <li>เจน QR Code บางทีสแกนไม่ได้</li>
+                <li>ดึงข้อมูลรูปภาพมาเปรียบเทียบ</li>
+                <li>เรียกใช้กล้องสแกน</li>
+                <li>ดึงข้อมูลจาก Database</li>
+            </ul>
+            <p><strong>วิธีแก้:</strong> หางานวิจัยเพิ่มเติมเกี่ยวกับ Database และ QR Code</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-calendar-alt"></i>6. แผนงานระยะถัดไป</h2>
+            <p><strong>แผน:</strong> นำโปรเจครวมกับเพื่อน นำขึ้นเซิร์ฟเวอร์ใช้งานจริง</p>
+            <p><strong>อุปสรรคคาดการณ์:</strong> การเก็บข้อมูลมาเทรนเพื่อความแม่นยำ</p>
+        </div>
+
+        <div class="section images">
+            <h2><i class="fas fa-images"></i>ภาพประกอบผลงาน</h2>
+            <p>ภาพตัวอย่างระบบ QR Code และ AI ตรวจจับใบหน้า</p>
+            <img src="ผลลัพธ์/Screenshot 2026-03-26 145336.png" alt="Screenshot 1" class="small">
+            <img src="ผลลัพธ์/Screenshot 2026-03-26 145450.png" alt="Screenshot 2" class="small">
+            <img src="ผลลัพธ์/655630997_1714432966192708_3376928625917682512_n.jpg" alt="ผลลัพธ์ 1" class="small">
+            <p>หน้า Test QR Code</p>
+            <img src="ผลลัพธ์/Screenshot 2026-03-27 200846.png" alt="Screenshot 3">
+            <img src="ผลลัพธ์/Screenshot 2026-03-27 201056.png" alt="Screenshot 5">
+            <img src="ผลลัพธ์/Screenshot 2026-03-27 200913.png" alt="Screenshot 4">
+        </div>
+    </div>
+</body>
+</html>
