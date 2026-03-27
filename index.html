@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อินโฟกราฟิก รายงานความก้าวหน้าโครงงาน</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #2d2d2d;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border-radius: 10px;
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            background: #3a3a3a;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid #4ecdc4;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #4ecdc4;
+            display: flex;
+            align-items: center;
+        }
+        .section h2 i {
+            margin-right: 10px;
+        }
+        .progress-bar {
+            background: #555;
+            border-radius: 10px;
+            height: 20px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s;
+        }
+        .timeline {
+            list-style: none;
+            padding: 0;
+        }
+        .timeline li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .timeline li:before {
+            content: '•';
+            color: #4ecdc4;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+        }
+        .references {
+            background: #454545;
+            padding: 10px;
+            border-left: 5px solid #ff6b6b;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .tool {
+            background: #555;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .images {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .images img {
+            max-width: 400px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .small {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Progress Report Project</h1>
+            <h2>Automatic Attendance System using Facial Recognition and 2FA</h2>
+            <p>Patcharaporn Khidkhin (6612247037) - Elective Robot Automation</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-user"></i>1. Role and Scope of Work</h2>
+            <p><strong>Main Responsibilities:</strong> Train AI for face detection, generate QR codes that last 60 seconds, develop QR code system for login, UI to show scan history</p>
+            <p><strong>Objectives:</strong> Integrate QR codes with AI face detection</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-chart-line"></i>2. Results</h2>
+            <p>80% of assigned work completed</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%;"></div>
+            </div>
+            <p>Successfully integrated QR code scanning with AI face detection, displaying scan history (date/time) for verification</p>
+            <div class="tools">
+                <span class="tool">OpenCV</span>
+                <span class="tool">WebRTC</span>
+                <span class="tool">MySQL</span>
+                <span class="tool">UI</span>
+            </div>
+            <p><strong>Evidence:</strong> <a href="https://github.com/patchara1909/scan_test.py" style="color: #4ecdc4;">GitHub Repository</a></p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-brain"></i>3. Principles and Reasoning</h2>
+            <p>Why use QR Code? To enhance security and speed of identity verification</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+            <ul class="timeline">
+                <li><strong>QR Code:</strong> Use standard QR code knowledge and Dynamic QR for security</li>
+                <li><strong>Computer Vision:</strong> Use OpenCV and WebRTC for image processing and camera connection</li>
+                <li><strong>UI Design:</strong> Focus on accuracy, speed, and user satisfaction</li>
+                <li><strong>Database:</strong> Use MySQL for data storage</li>
+            </ul>
+            <div class="references">
+                <strong>References:</strong> Denso Wave, ISO/IEC 18004, Szeliski's Computer Vision, OpenCV, WebRTC, MySQL Docs
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-link"></i>4. Linking Work to Project Objectives and Overall Group</h2>
+            <p>QR Code acts as student ID, used before identity verification, checks date/time</p>
+            <p><strong>Integrates with:</strong> Database and AI face detection</p>
+            <p><strong>Deliverables:</strong> QR Code system functions complete</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-search"></i>5. Analysis, Problem Solving, and Learning</h2>
+            <p><strong>Problems Encountered:</strong></p>
+            <ul class="timeline">
+                <li>QR Code not verifying scanner identity</li>
+                <li>Sometimes QR Code generation fails</li>
+                <li>Retrieving image data for comparison</li>
+                <li>Accessing camera for scanning</li>
+                <li>Retrieving data from Database</li>
+            </ul>
+            <p><strong>Solutions:</strong> Research more on Database and QR Code</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-calendar-alt"></i>6. Next Plan</h2>
+            <p><strong>Plan:</strong> Integrate project with teammates, deploy to server for real use</p>
+            <p><strong>Anticipated Challenges:</strong> Collecting data for training accuracy</p>
+        </div>
+
+        <div class="section images">
+            <h2><i class="fas fa-images"></i>Work Screenshots</h2>
+            <p>Screenshots of QR Code system and AI face detection</p>
+            <img src="ผลลัพธ์/Screenshot 2026-03-26 145336.png" alt="Screenshot 1" class="small">
+            <img src="ผลลัพธ์/Screenshot 2026-03-26 145450.png" alt="Screenshot 2" class="small">
+            <img src="ผลลัพธ์/655630997_1714432966192708_3376928625917682512_n.jpg" alt="ผลลัพธ์ 1" class="small">
+            <p>Test QR Code Page</p>
+            <img src="ผลลัพธ์/Screenshot 2026-03-27 200846.png" alt="Screenshot 3">
+            <img src="ผลลัพธ์/Screenshot 2026-03-27 201056.png" alt="Screenshot 5">
+            <img src="ผลลัพธ์/Screenshot 2026-03-27 200913.png" alt="Screenshot 4">
+        </div>
+    </div>
+</body>
+</html>
